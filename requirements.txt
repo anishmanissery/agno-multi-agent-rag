@@ -1,0 +1,12 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+python-dotenv==1.0.0
+agno==2.6.9
+google-genai==2.6.0
+lancedb==0.30.2
+pypdf==6.12.2
+ddgs==9.14.4
+tantivy==0.26.0
+pylance==6.0.1
+sqlalchemy==2.0.50
+beautifulsoup4==4.14.3
