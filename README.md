@@ -34,9 +34,3 @@ uvicorn api:app --reload
 - `api.py`: The FastAPI wrapper initializes the ADK runner and exposes endpoints like `/chat`.
 - `.env`: Stores the `GOOGLE_API_KEY` and other configurations.
 - `index.html`: It includes a basic chat interface with an input field and a display area.
-
----
-
-### Points
-
-Since the frontend will likely be served from a different origin (or a local file), you must enable **CORS (Cross-Origin Resource Sharing)** in the FastAPI app.
