@@ -1,6 +1,8 @@
 import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from dotenv import load_dotenv
 from agno.run.team import TeamRunOutput
 from agno.utils.pprint import pprint_run_response
@@ -17,6 +19,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+@app.get("/")
+async def serve_index():
+    return FileResponse("static/index.html")
 
 @app.post("/chat")
 async def chat(request: Request):

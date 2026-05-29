@@ -10,21 +10,21 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-2. Install all packages listed in `requirements.txt` file
+2. Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Add your `GOOGLE_API_KEY` in `.env` file
+3. Add your `GOOGLE_API_KEY` to the `.env` file.
 
-4. **Start your FastAPI server**: Run your `api.py` with:
+4. Start the FastAPI server:
 
 ```bash
 uvicorn api:app --reload
 ```
 
-5. **Open the frontend**: Simply double-click your `index.html` file to open it in a browser, or serve it using a local server like `python -m http.server 3000`.
+5. Open your browser and go to http://127.0.0.1:8000
 
 ---
 
